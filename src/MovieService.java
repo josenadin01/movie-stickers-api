@@ -1,5 +1,42 @@
+import java.util.Collections;
 import java.util.List;
-public class MovieUtils {
+import java.util.Objects;
+import java.util.Scanner;
+
+import model.ApiContent;
+import model.Movie;
+public class MovieService {
+
+    public void printBestMovies(List<Movie> movies) {
+        MovieService.printMovies(movies);
+    }
+
+    public List<Movie> getBestMovies() {
+        HttpUtils httpUtils = new HttpUtils();
+
+        return httpUtils.sendMovieGet();
+    }
+
+    public void rateMovie(Scanner input, List<Movie> movies) {
+        String movieName = getMovieName(input);
+        Movie filmeFiltrado = movies.stream()
+                .filter(movie -> movie.getTitle().equalsIgnoreCase(movieName))
+                .findFirst()
+                .orElse(null);
+        if (Objects.nonNull(filmeFiltrado)) {
+            System.out.print("Digite a nota do filme: ");
+            int rate = input.nextInt();
+            System.out.println("Você avaliou " + movieName + " com nota " + rate);
+        } else {
+            System.out.println("Esse filme não existe");
+            rateMovie(input, movies);
+        }
+    }
+
+    private static String getMovieName(Scanner sc) {
+        System.out.print("Digite o nome do filme que deseja avaliar: ");
+        return sc.nextLine();
+    }
 
     public static void printMovies(List<Movie> movies) {
         System.out.println(movies);

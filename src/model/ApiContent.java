@@ -1,4 +1,7 @@
+package model;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,16 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Movie {
-
-
-    @SerializedName("title")
+public class ApiContent {
+    
     private String title;
 
-    @SerializedName("imDbRating")
-    private String rating;
-
-    @SerializedName("image")
-    private String image;
-
+    private String imageUrl;
 }

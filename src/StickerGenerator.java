@@ -39,7 +39,7 @@ public class StickerGenerator {
         graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 80));
         graphics.drawString("Topzera", (width / 2) - 100, resizedHeight - 100);
 
-        ImageIO.write(resizedImage, "png", new File("assets/" + stickerName + "-sticker.png"));
+        ImageIO.write(resizedImage, "png", new File("assets/" + stickerName));
 
     }
 }
