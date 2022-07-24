@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Scanner;
 
 import javax.imageio.ImageIO;
@@ -15,7 +14,7 @@ public class StickerGenerator {
 
     public void nameSticker(InputStream inputStream) throws MalformedURLException, IOException {
         Scanner input = new Scanner(System.in);
-        //var stickerGenerator = new StickerGenerator();
+        // var stickerGenerator = new StickerGenerator();
         String stickerName = "";
         System.out.print("Digite o nome do seu sticker (tudo junto e sem acentos): ");
         stickerName = input.nextLine();
@@ -25,7 +24,8 @@ public class StickerGenerator {
 
     public void generateSticker(InputStream inputStream, String stickerName) throws IOException {
 
-        //InputStream inputStream = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_1.jpg").openStream();
+        // InputStream inputStream = new
+        // URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_1.jpg").openStream();
         BufferedImage image = ImageIO.read(inputStream);
 
         int width = image.getWidth();
@@ -39,7 +39,7 @@ public class StickerGenerator {
         graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 80));
         graphics.drawString("Topzera", (width / 2) - 100, resizedHeight - 100);
 
-        ImageIO.write(resizedImage, "png", new File("assets/" + stickerName));
+        ImageIO.write(resizedImage, "png", new File(stickerName));
 
     }
 }
