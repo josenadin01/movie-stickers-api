@@ -1,18 +1,21 @@
-## Getting Started
+<h1 align="center">
+   Stickers API
+</h1>
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+<br>
 
-## Folder Structure
+## ✨ Tecnologia
 
-The workspace contains two folders by default, where:
+Esse projeto foi desenvolvido com a seguinte tecnologia:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- [Java](https://www.java.com/pt-BR/)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### 
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+A aplicação teve como princípio melhorar meus conhecimentos Java, principalmente na parte de:
+- Orientação a Objetos.
+- Como extrair dados vindos de APIS.
 
-## Dependency Management
+## 💻 Projeto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+O projeto tem como ideia se conectar com uma API de filmes e uma da NASA para manipular informações e também gerar Stickers que podem ser personalizados de acordo com a estilização da mensagem que está no código
