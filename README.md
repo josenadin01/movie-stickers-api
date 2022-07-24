@@ -14,7 +14,7 @@ Esse projeto foi desenvolvido com a seguinte tecnologia:
 
 A aplicação teve como princípio melhorar meus conhecimentos Java, principalmente na parte de:
 - Orientação a Objetos.
-- Como extrair dados vindos de APIS.
+- Como extrair dados vindos de APIs.
 
 ## 💻 Projeto
 
